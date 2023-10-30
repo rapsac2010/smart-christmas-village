@@ -22,9 +22,19 @@ TODO: Config for sensitivity
   - Select corresponding port with vixen_commands.py
 5. Create sequences or import from the sequence pack provided
 
+### Arduino
+1. Change variables to available setup
+  - Number of leds
+  - Baud rate: highest available for your board is likely best performant
+  - Data pin: choose the appropriate data pin
+Wiring tip: Ensure ground of led string power supply and arduino ground are connected!
+
 ### Python
 Run both christmas_cv_runner.py and christmas_show_runner.py to have your setup use motion and gesture detection.
 Currently implemented gestures:
 - Thumbs down: Skips to next song, forces song to be played
 
 ## Showcase
+https://github.com/rapsac2010/smart-christmas-village/assets/49317512/b1d51dea-57ba-4320-aa3e-f1a1da2d1953
+
+
