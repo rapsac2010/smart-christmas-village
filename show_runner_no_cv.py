@@ -86,7 +86,7 @@ while True:
         if is_time_in_interval(song_start_time, song_end_time):
             print("time in interval 2")
             # Play random song based on avg_plays_per_hour
-            if random.choices([True, False], weights=[avg_plays_per_hour/60, 1 - avg_plays_per_hour/60])[0]:
+            if random.choices([True, False], weights=[avg_plays_per_hour/360, 1 - avg_plays_per_hour/360])[0]:
                 print("Playing random song")
                 play_random_song(None)
             else:
