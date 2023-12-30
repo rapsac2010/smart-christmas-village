@@ -84,6 +84,7 @@ def playSequence(sequence, force_play=False):
 
     if stat == []:
         # skip if no sequence is playing
+        print("test1")
         pass
     elif int(stat['State']) == 1 and not force_play and not stat["Sequence"]["Name"] == "idle":
         print("Sequence already playing")
@@ -92,6 +93,9 @@ def playSequence(sequence, force_play=False):
         print("Idle already playing, stopping idle")
         # print("Then sleeping for 5")
         stopSequence(stat["Sequence"])
+    elif int(stat['State']) == 1 and not force_play and stat["Sequence"]["Name"] == "idle" and sequence["Name"] == "idle":
+        print("Idle already playing, and trying to play idle, skipping command")
+        return -1
     elif force_play:
         print("Forcing play")
         sequence_playing = stat["Sequence"]
