@@ -77,6 +77,7 @@ def playSequence(sequence, force_play=False):
     # print response contents
     stat = response.json()
     if stat != []:
+        print(stat)
         stat = stat[0]
     # print(stat)
 
