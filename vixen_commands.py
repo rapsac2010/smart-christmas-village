@@ -30,8 +30,6 @@ def getSequencePlaying(e=None):
             return True
     return False
 
-
-
 def stopSequence(sequence):
     response = requests.post(URL + "/api/play/stopSequence", json=sequence)
     req = response.json()
